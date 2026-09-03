@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav {
+	display: flex;
+	text-align: center;
+	justify-content: end;
+	gap: 5%;
+	border: 1px solid Black;
+	padding: 2%;
+	padding-right: 8%;
+}
+
+nav a {
+	text-decoration: none;
+	color: Black;
+	font-family: "Cantarell", 'Courier New', Courier, monospace;
+}
+
+nav a:hover {
+	background-color: Black;
+	border-radius: 100px;
+	color: White;
+	padding: 10px;
+	transition: 0.2s ease-in;
+}
