@@ -15,7 +15,7 @@ nav {
   justify-content: space-between;
   border: none;
   padding: 2%;
-  padding-right: 8%;
+  padding-right: 5%;
   background: transparent;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -60,6 +60,7 @@ nav a:hover {
   margin: 2%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   padding: 5%;
+  padding-right: 15%;
   line-height: 75px;
 }
 
@@ -81,6 +82,7 @@ nav a:hover {
 
 #sqr1 {
   border: 1px solid Black;
+  border-radius: 10px;
   height: auto;
-  width: 200px;
+  width: 350px;
 }
