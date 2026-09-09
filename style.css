@@ -11,14 +11,15 @@ body {
 }
 
 nav {
+  /* position: fixed; */
   display: flex;
   justify-content: space-between;
   border: none;
   padding: 2%;
   padding-right: 5%;
   background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   margin: 1.5%;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -52,11 +53,12 @@ nav a:hover {
 
 .hero-section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   border: none;
   border-radius: 10px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   margin: 2%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   padding: 5%;
@@ -64,12 +66,17 @@ nav a:hover {
   line-height: 75px;
 }
 
-.hero-section>div p:first-child {
+.hero-section>div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.introDiv p:first-child {
   font-weight: bold;
   font-size: 40px;
 }
 
-.hero-section>div span {
+.introDiv span {
   font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-weight: bolder;
   font-size: 70px;
@@ -81,8 +88,36 @@ nav a:hover {
 }
 
 #sqr1 {
+  /* display: none; */
   border: 1px solid Black;
   border-radius: 10px;
-  height: auto;
-  width: 350px;
+  width: 410px;
+  height: 216px;
+  background: url(/assets/WindowsWallpaper.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#sqr1>.desktop>.taskBar {
+  align-self: flex-end;
+  height: 10%;
+  width: 100%;
+  background-color: gray;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+#sqr1>#titleBar {
+  display: none;
+}
+
+.hero-section .skills {
+  display: flex;
+  border: 1px solid Black;
+  justify-content: space-between;
+}
+
+.skills>input {
+  display: none;
 }
