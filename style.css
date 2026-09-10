@@ -129,6 +129,7 @@ nav a:hover {
   align-items: center;
   line-height: 1.4;
   color: White;
+  transition: 0.2s ease-in-out;
 }
 
 .skills>div:first-child input, .projects>input {
