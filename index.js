@@ -1,32 +1,33 @@
-let skillsInput = document.getElementById("arrow1");
-let projectsInput = document.getElementById("arrow2");
+const skillsInput = document.getElementById("arrow1");
+const projectsInput = document.getElementById("arrow2");
 
-let iconDown1 = document.getElementById("iconDown1");
-let iconDown2 = document.getElementById("iconDown2");
+const iconDown1 = document.getElementById("iconDown1");
+const iconDown2 = document.getElementById("iconDown2");
 
-let skills = document.querySelector("skills");
-let projects = document.querySelector("projects");
+const skills = document.querySelector(".skills").firstElementChild;
+const projects = document.querySelector(".projects").firstElementChild;
 
-console.log(skillsInput);
-
-// if (skillsInput.checked) {
-//     iconDown1.style.transform = "rotate(180deg)";
-// } else {
-//     iconDown1.style.transform = "rotate(0deg)";
-// }
+const skillsDesc = document.querySelector(".skills").lastElementChild;
+const projectsDesc = document.querySelector(".projects").lastElementChild;
 
 skillsInput.addEventListener("change", () => {
-    if (skillsInput.checked) {
-        iconDown1.style.rotate = "180deg";
-    } else {
-        iconDown1.style.rotate = "0deg";
-    }
+  if (skillsInput.checked) {
+    iconDown1.style.rotate = "180deg";
+    skills.style.height = "500px";
+    skillsDesc.style.display = "block";
+  } else {
+    iconDown1.style.rotate = "0deg";
+    skills.style.height = "clamp(25px, 50px, 75px)";
+    skillsDesc.style.display = "none";
+  }
 });
 
 projectsInput.addEventListener("change", () => {
-    if (this.checked) {
-        iconDown2.style.transform = "rotate(180deg)";
-    } else {
-        iconDown2.style.transform = "rotate(0deg)";
-    }
+  if (projectsInput.checked) {
+    iconDown2.style.rotate = "180deg";
+    projects.style.height = "500px";
+  } else {
+    iconDown2.style.rotate = "0deg";
+    projects.style.height = "clamp(25px, 50px, 755px)";
+  }
 });

@@ -66,7 +66,7 @@ nav a:hover {
   gap: clamp(10px, 15px, 20px);
 }
 
-.hero-section>div:first-child {
+.hero-section > div:first-child {
   display: flex;
   justify-content: space-between;
 }
@@ -83,7 +83,7 @@ nav a:hover {
   color: rgba(68, 76, 247, 1);
 }
 
-.hero-section>div p:nth-child(3) {
+.hero-section > div p:nth-child(3) {
   font-size: large;
 }
 
@@ -98,7 +98,7 @@ nav a:hover {
   background-size: cover;
 }
 
-#sqr1>.desktop>.taskBar {
+#sqr1 > .desktop > .taskBar {
   align-self: flex-end;
   height: 10%;
   width: 100%;
@@ -108,30 +108,49 @@ nav a:hover {
   border-top-right-radius: 0px;
 }
 
-#sqr1>#titleBar {
+#sqr1 > #titleBar {
   display: none;
 }
 
-.hero-section .skills>div:first-child, .projects {
+.skills {
   display: flex;
-  border: none;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  height: clamp(25px, 50px, 75px);
-  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
-  padding-inline: 10px;
+  border: none;
   background-color: rgb(89, 97, 255);
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
 }
 
-.skills>div:first-child>span, .skills>div:first-child label, .projects>label {
+.skills > div:first-child,
+.projects > div:first-child {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: clamp(25px, 50px, 75px);
+  padding-inline: 10px;
+  transition: 0.2s ease-in-out;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.skills > div:first-child > span,
+.projects > div:first-child > span,
+.skills > div:first-child label,
+.projects > div:first-child label {
+  display: flex;
+  margin-block-start: 15px;
   align-items: center;
   line-height: 1.4;
   color: White;
   transition: 0.2s ease-in-out;
 }
 
-.skills>div:first-child input, .projects>input {
+.skills > div:first-child input,
+.projects > div:first-child input {
+  display: none;
+}
+
+.skills > div:last-child {
   display: none;
 }
